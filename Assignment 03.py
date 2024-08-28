@@ -1,18 +1,15 @@
-#Scenario 1
+#Question 01:
 
-from bs4 import BeautifulSoup
-import requests
+strr = input("Enter a string: ")
+vovel = ['a','e','i','o','u']
+result = []
 
-url = "https://realpython.github.io/fake-jobs/"
-request = requests.get(url)
-request
+for letter in vovel:
+    if letter in strr:
+        result.append(letter)
 
-info = BeautifulSoup(request.content,"html5lib")
-info
+print("vovel",result)
+print("count", len(result))
 
-title = info.find(class_="title is-1")
-title.text.strip()
-
-div = info.find(id="resultcontainer")
-div.text
+#Question 02:
     
